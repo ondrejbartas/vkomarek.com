@@ -40,6 +40,8 @@ h3{font-size:1.25rem}
 .menu a:hover{color:var(--txt)}
 .menu-cta{padding:8px 18px;border:1px solid var(--accent);border-radius:999px;color:var(--txt)!important}
 .menu-cta:hover{background:var(--accent)}
+.menu .lang{font-size:.82rem;letter-spacing:.08em;color:var(--accent-2);font-weight:500}
+.menu .lang:hover{color:var(--txt)}
 .navtog,.burger{display:none}
 
 /* Hero */
@@ -119,6 +121,7 @@ h3{font-size:1.25rem}
 .footer-inner{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:28px 24px;color:var(--muted);font-size:.85rem}
 
 @media(max-width:860px){
+  .nav{backdrop-filter:none;-webkit-backdrop-filter:none;background:#0a0a0f}
   .cards{grid-template-columns:1fr}
   .videos{grid-template-columns:1fr}
   .about-grid{grid-template-columns:1fr;gap:32px}

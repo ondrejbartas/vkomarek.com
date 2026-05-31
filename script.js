@@ -18,9 +18,16 @@ function load(i, play){
   const t = tracks[i];
   t.classList.add('active');
   audio.src = t.dataset.src;
+  audio.load();
   npTitle.textContent = t.dataset.title;
   if (play){ audio.play().catch(()=>{}); }
 }
+
+// Only one media element plays at a time across the whole page.
+const media = [audio, ...document.querySelectorAll('video')];
+media.forEach(el => el.addEventListener('play', () => {
+  media.forEach(other => { if (other !== el) other.pause(); });
+}));
 
 tracks.forEach((t,i) => t.addEventListener('click', () => {
   if (i === current){ audio.paused ? audio.play() : audio.pause(); }
