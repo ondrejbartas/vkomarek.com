@@ -94,7 +94,7 @@ h3{font-size:1.25rem}
 /* Videos */
 .videos{display:grid;grid-template-columns:repeat(2,1fr);gap:20px}
 .video{border:1px solid var(--line);border-radius:16px;overflow:hidden;background:#000}
-.video video{width:100%;display:block;aspect-ratio:16/9;object-fit:cover;background:#000}
+.video video{width:100%;height:auto;display:block;aspect-ratio:16/9;object-fit:cover;background:#000}
 .video figcaption{padding:14px 18px;font-family:var(--display);font-size:.95rem;color:var(--txt);background:var(--panel)}
 
 /* About */
